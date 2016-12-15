@@ -1,6 +1,6 @@
 module.exports = {
 	entry: [
-		__dirname + '/source/search-component/ContractAppContainer.js'
+		__dirname + '/source/KanbanBoard/App.js'
 	],
 	output: {
 		path: __dirname,

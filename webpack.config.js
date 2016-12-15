@@ -1,6 +1,6 @@
 module.exports = {
 	entry: [
-		__dirname + '/source/KanbanBoard/App.js'
+		__dirname + '/source/Shoopping/AnimatedShooppingList.js'
 	],
 	output: {
 		path: __dirname,

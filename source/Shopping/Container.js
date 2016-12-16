@@ -6,7 +6,7 @@ import { render } from 'react-dom';
 import { DragDropContext } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
 
-import ShoppingCart from './ShooppingCart';
+import ShoppingCart from './ShoppingCart';
 import Snack from './Snack';
 
 class Container extends Component {

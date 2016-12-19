@@ -1,6 +1,6 @@
 module.exports = {
 	entry: [
-		__dirname + '/source/KanbanBoard/App.js'
+		__dirname + '/source/Github/App.js'
 	],
 	output: {
 		path: __dirname,

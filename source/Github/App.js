@@ -4,10 +4,14 @@
 
 import React, { Component, PropType } from 'react';
 import { render } from 'react-dom';
+import { Router, Route, hashHistory , IndexRoute, Link } from 'react-router';
 
 import About from './About';
-import Home from './Home';
+import Home  from './Home';
 import Repos from './Repos';
+import RepoDetails from './RepoDetails';
+import ServerError from './ServerError';
+
 
 class App extends Component {
 
@@ -27,21 +31,14 @@ class App extends Component {
     }
 
     render() {
-        var Child;
-        switch (this.state.route) {
-            case '/about' : Child = About; break;
-            case '/repos' : Child = Repos; break;
-            default:        Child = Home;
-        }
-
         return (
             <div>
                 <header>App</header>
                 <menu>
-                    <li><a href="#/about">About</a></li>
-                    <li><a href="#/repos">Repos</a></li>
+                    <li><Link href="#/about" activeClassName='active'>About</Link></li>
+                    <li><Link href="#/repos" activeClassName='active'>Repos</Link></li>
                 </menu>
-                <Child />
+                {this.props.children}
             </div>
         )
 
@@ -50,4 +47,15 @@ class App extends Component {
 
 export default App;
 
-render(<App/>, document.getElementById('root'));
+render((
+    <Router  history={hashHistory}>
+        <Route path="/" component={App}>
+            <IndexRoute component={Home}/>
+            <Route path="about" component={About} title="About us"/>
+            <Route path="repos" component={Repos}>
+                <Route path="/repo/:repo_name" component={RepoDetails}/>
+            </Route>
+            <Route path="error" component={ServerError} />
+        </Route>
+    </Router>
+), document.getElementById('root'));

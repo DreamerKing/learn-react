@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.20.0",
+    "history": "^2.0.0",
     "marked": "^0.3.6",
     "react": "^15.0.0",
     "react-addons-css-transition-group": "^15.4.1",
@@ -16,6 +17,7 @@
     "react-dnd": "^2.1.4",
     "react-dnd-html5-backend": "^2.1.2",
     "react-dom": "^15.0.0",
+    "react-router": "^2.8.1",
     "whatwg-fetch": "^2.0.1"
   },
   "devDependencies": {

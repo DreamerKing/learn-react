@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-dom';
+import { Router, Route, hashHistory} from 'react-router';
+
 import KanbanBoardContainer from './KanbanBoardContainer';
+import KanbanBoard from './KanbanBoard';
+import EidtCard from './EditCard';
+import NewCard from './NewCard';
 
 /*let cardsList = [
     {
@@ -37,4 +42,12 @@ import KanbanBoardContainer from './KanbanBoardContainer';
 
 
 
-ReactDOM.render(<KanbanBoardContainer />, document.getElementById('root'));
+render((<Router history={hashHistory}>
+        <Route component={KanbanBoardContainer}>
+            <Route path="/" component={KanbanBoard}>
+                <Route path="new" component={NewCard} />
+                <Route path="edit/:card_id" component={EidtCard}></Route>
+            </Route>
+        </Route>
+        </Router>
+), document.getElementById('root'));

@@ -4,9 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "jset": {
+    "transform": "./node_modules/babel-jest",
+    "unmockModulePathPatterns": [
+      "./node_modules/react",
+      "./node_modules/react-dom",
+      "./node_modules/react-addons-test-utils",
+      "./node_modules/fbjs"
+    ]
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "DreamerKing",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-jest": "^18.0.0",
+    "babel-polyfill": "^6.20.0",
+    "jest": "^18.0.0",
+    "jest-cli": "^18.0.0",
+    "react-addons-test-utils": "^15.4.1",
+    "react-shallow-testutils": "^2.0.0"
+  }
 }

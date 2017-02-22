@@ -3,6 +3,6 @@
  */
 import React from 'react';
 import { render } from 'react-dom';
-import TodoApp from './OfficeTutorial/MarkdownEditor';
+import HelloMessage from './OfficeTutorial/HelloMessage';
 
-render(<MarkdownEditor/>, document.getElementById('root'));
+render(<HelloMessage name="DreamerKing"/>, document.getElementById('root'));

@@ -1,13 +1,17 @@
 /**
  * Created by DK on 2017/2/14.
  */
-import React, { Component } from 'react';
-import { render } from 'react-dom';
+import React, { Component, PropTypes } from 'react';
 
 class HelloMessage extends Component {
+
+    static PropTypes = {
+        name: PropTypes.string.isRequired
+    }
+
     render () {
         return <div>Hello { this.props.name }!</div>
     }
 }
 
-render(<HelloMessage name="DreamerKing"/>, document.getElementById('root'));
+export default HelloMessage;

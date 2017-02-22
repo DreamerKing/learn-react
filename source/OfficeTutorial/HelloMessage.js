@@ -6,12 +6,20 @@ import React, { Component, PropTypes } from 'react';
 class HelloMessage extends Component {
 
     static PropTypes = {
-        name: PropTypes.string.isRequired
+        name: PropTypes.name.string.isRequired
     }
 
-    render () {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
         return <div>Hello { this.props.name }!</div>
     }
 }
+
+/*HelloMessage.PropTypes = {
+    name: PropTypes.string.isRequired
+}*/
 
 export default HelloMessage;

@@ -3,6 +3,6 @@
  */
 import React from 'react';
 import { render } from 'react-dom';
-import HelloMessage from './OfficeTutorial/HelloMessage';
+import Clock from './OfficeTutorial/Clock';
 
-render(<HelloMessage name="DreamerKing"/>, document.getElementById('root'));
+render(<Clock name="DreamerKing"/>, document.getElementById('root'));
